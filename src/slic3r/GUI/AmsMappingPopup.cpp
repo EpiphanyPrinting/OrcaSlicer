@@ -254,7 +254,7 @@ void MaterialItem::doRender(wxDC &dc)
     }
 
     if (m_selected) {
-        dc.SetPen(wxColour(0x00, 0xAE, 0x42));
+        dc.SetPen(AMS_CONTROL_BRAND_COLOUR); // ORCA Highlight color for selected AMS in send job dialog
         dc.SetBrush(*wxTRANSPARENT_BRUSH);
         dc.DrawRoundedRectangle(1, 1, MATERIAL_ITEM_SIZE.x - 1, MATERIAL_ITEM_SIZE.y - 1, 5);
     }
@@ -266,7 +266,7 @@ void MaterialItem::doRender(wxDC &dc)
     }
 
     if (m_selected) {
-        dc.SetPen(wxColour(0x00, 0xAE, 0x42));
+        dc.SetPen(AMS_CONTROL_BRAND_COLOUR); // ORCA Highlight color for selected AMS in send job dialog
         dc.SetBrush(*wxTRANSPARENT_BRUSH);
         dc.DrawRoundedRectangle(0, 0, MATERIAL_ITEM_SIZE.x, MATERIAL_ITEM_SIZE.y, 5);
     }
@@ -318,8 +318,8 @@ void MaterialItem::doRender(wxDC &dc)
      title_panel->Layout();
      title_panel->Fit();
 
-     auto left_ams_title_text = new wxStaticText(this, wxID_ANY, _L("Left Ams"));
-     auto right_ams_title_text = new wxStaticText(this, wxID_ANY, _L("Right Ams"));
+     auto left_ams_title_text = new wxStaticText(this, wxID_ANY, _L("Left AMS"));
+     auto right_ams_title_text = new wxStaticText(this, wxID_ANY, _L("Right AMS"));
 
      m_sizer_ams_left->Add(left_ams_title_text, 0, wxALIGN_CENTER, 0);
      m_sizer_ams_right->Add(right_ams_title_text, 0, wxALIGN_CENTER, 0);
